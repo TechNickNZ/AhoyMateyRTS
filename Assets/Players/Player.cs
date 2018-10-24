@@ -8,11 +8,6 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : NetworkBehaviour
 {
     private Vector3 inputValue;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
