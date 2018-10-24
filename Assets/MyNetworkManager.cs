@@ -30,6 +30,6 @@ public class MyNetworkManager : NetworkManager {
     public override void OnClientConnect(NetworkConnection conn)
     {
         CancelInvoke("DebugDots");
-        Debug.Log(Time.timeSinceLevelLoad + ": Client is connect to IP: " + conn.address);
+        Debug.Log(Time.timeSinceLevelLoad + ": Client is connected to IP: " + conn.address);
     }
 }
