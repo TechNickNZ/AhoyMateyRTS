@@ -15,11 +15,16 @@ public class Player : NetworkBehaviour
         {
             return;
         }
-        inputValue.x = CrossPlatformInputManager.GetAxis("Horizontal");
+        inputValue.x = 0f;
         inputValue.y = 0f;
         inputValue.z = CrossPlatformInputManager.GetAxis("Vertical");
 
         transform.Translate(inputValue);
+
+        inputValue.x = 0f;
+        inputValue.z = 0f;
+        inputValue.y = CrossPlatformInputManager.GetAxis("Horizontal");
+        transform.Rotate(inputValue);
 	}
 
     public override void OnStartLocalPlayer()
