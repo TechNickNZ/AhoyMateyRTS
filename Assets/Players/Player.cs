@@ -8,8 +8,6 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : NetworkBehaviour
 {
     private Vector3 inputValue;
-    private Camera playerCamera;
-    private AudioListener playerListener;
 
     // Update is called once per frame
     void Update () {
@@ -26,9 +24,7 @@ public class Player : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        playerCamera = GetComponentInChildren<Camera>();
-        playerListener = GetComponentInChildren<AudioListener>();
-        playerCamera.enabled = true;
-        playerListener.enabled = true;
+        GetComponentInChildren<Camera>().enabled = true;
+        GetComponentInChildren<AudioListener>().enabled = true;
     }
 }
